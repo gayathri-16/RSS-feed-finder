@@ -44,8 +44,9 @@ export default {
     async sendUrl() {
       if (!this.url) return; 
       try {
-        
-        const response = await fetch(`${process.env.VUE_API_URL}/api`, {
+        console.log('API URL:', process.env.VUE_APP_API_URL);
+
+        const response = await fetch(`${process.env.VUE_APP_API_URL}/api`, {
 
           method: 'POST',
           headers: {
