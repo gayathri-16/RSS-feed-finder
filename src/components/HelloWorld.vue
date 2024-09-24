@@ -45,7 +45,7 @@ export default {
       if (!this.url) return; 
       try {
         
-        const response = await fetch(' https://backend-qfppaidkr-gayathris-projects-2254440b.vercel.app/api', {
+        const response = await fetch(`${process.env.API_URL}/api`, {
 
           method: 'POST',
           headers: {
