@@ -45,7 +45,7 @@ export default {
       if (!this.url) return; 
       try {
         
-        const response = await fetch('https://backend-4ou2njumm-gayathris-projects-2254440b.vercel.app/api', {
+        const response = await fetch(' https://backend-qfppaidkr-gayathris-projects-2254440b.vercel.app/api', {
 
           method: 'POST',
           headers: {
