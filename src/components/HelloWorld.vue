@@ -45,7 +45,7 @@ export default {
       if (!this.url) return; 
       try {
         
-        const response = await fetch(`${process.env.API_URL}/api`, {
+        const response = await fetch(`${process.env.VUE_API_URL}/api`, {
 
           method: 'POST',
           headers: {
