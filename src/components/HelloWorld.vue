@@ -1,29 +1,29 @@
 <template>
   <div class="flex items-center justify-center h-screen"> <!-- Parent container -->
-    <div class="flex items-start px-4 h-1/2 flex-col w-1/2 justify-start py-4 shadow-custom">
-      <div class="flex items-center justify-start py-4">
-        <label for="url" class="px-4 font-bold text-xl">Enter URL</label>
+    <div class="flex items-start px-4 h-auto flex-col w-full sm:w-11/12 md:w-3/4 lg:w-1/2 justify-start py-4 shadow-custom">
+      <div class="flex flex-col px-4 sm:flex-row sm:items-start lg:items-center justify-start py-4">
+        <label for="url" class="sm:px-4 font-bold text-xl">Enter URL</label>
         <input 
           id="url"
           v-model="url" 
           @input="sendUrl" 
-          class="border border-gray-300 p-2 w-64 focus:outline-none rounded-lg" 
+          class="border border-gray-300 p-2 w-full sm:w-64 focus:outline-none rounded-lg mt-2 sm:mt-0 sm:ml-4" 
           type="text" 
           placeholder="Paste URL"
         >
       </div>
 
-      <div class="flex px-4 items-start justify-start py-4">
+      <div class="flex flex-col sm:flex-row px-4 items-start justify-start py-4">
         <h4 class="font-bold text-xl">Your URL is categorized as</h4>
-        <p class="text-pink-700 font-bold text-xl pl-4">{{ category }}</p>
+        <p class="text-pink-700 font-bold text-xl pl-0 sm:pl-4">{{ category }}</p>
       </div>
 
-      <div class="image-box"> <!-- Add overflow-hidden -->
+      <div class="image-box w-full sm:w-2/3 md:w-1/2 lg:w-1/3"> <!-- Add overflow-hidden for responsive -->
         <img 
           v-if="thumbnail" 
           :src="thumbnail" 
           alt="Thumbnail" 
-          class=""
+          class="w-full h-auto object-cover"
         >
       </div>
     </div>
@@ -68,18 +68,17 @@ export default {
 </script>
 
 <style scoped>
-/* Add any scoped styles here */
-.image-box{
-  width:400px;
-  height:300px;
-  margin-left:1rem;
+.image-box {
+  width: 100%;
+  height: auto;
+  margin-left: 1rem;
   object-fit: cover;
-position:relative;
+  position: relative;
 }
-.image-box > img{
+.image-box > img {
   max-width: 100%;
   max-height: 100%;
-  position: absolute;
+  position: relative;
   box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 2px 0px;
 }
 </style>
