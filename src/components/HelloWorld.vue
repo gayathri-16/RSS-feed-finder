@@ -1,6 +1,6 @@
 <template>
   <div class="flex items-center justify-center h-screen"> <!-- Parent container -->
-    <div class="flex items-start px-4 h-auto flex-col w-full m-4 sm:w-11/12 md:w-auto lg:w-auto justify-start py-4 shadow-custom">
+    <div class="flex items-start px-4 h-auto flex-col w-full m-2 sm:w-11/12 md:w-auto lg:w-auto justify-start py-4 shadow-custom">
       <div class="flex flex-col px-4 sm:flex-row sm:items-start lg:items-center justify-start py-4">
         <label for="url" class="sm:px-4 font-bold text-xl">Enter URL</label>
         <input 
