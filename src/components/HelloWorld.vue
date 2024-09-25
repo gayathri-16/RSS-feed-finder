@@ -22,12 +22,13 @@
         <p class="text-pink-700 font-bold text-xl pl-0 sm:pl-4">{{ rss_link }}</p>
       </div>
 
-      <div class="image-box w-full sm:w-2/3 md:w-1/2 lg:w-1/3"> <!-- Add overflow-hidden for responsive -->
+      <!-- Image box with fixed size -->
+      <div class="image-box"> 
         <img 
           v-if="thumbnail" 
           :src="thumbnail" 
           alt="Thumbnail" 
-          class="w-full h-auto object-cover"
+          class="object-cover"
         >
       </div>
     </div>
@@ -77,15 +78,17 @@ export default {
 <style scoped>
 .image-box {
   width: 100%;
-  height: auto;
+  max-width: 400px; /* Set max width */
+  height: 200px;    /* Fixed height */
   margin-left: 1rem;
   object-fit: cover;
   position: relative;
 }
+
 .image-box > img {
-  max-width: 100%;
-  max-height: 100%;
-  position: relative;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensure the image covers the box */
   box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 2px 0px;
 }
 </style>
