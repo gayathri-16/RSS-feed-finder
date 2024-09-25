@@ -17,6 +17,10 @@
         <h4 class="font-bold text-xl">Your URL is categorized as</h4>
         <p class="text-pink-700 font-bold text-xl pl-0 sm:pl-4">{{ category }}</p>
       </div>
+      <div class="flex flex-col sm:flex-row px-4 items-start justify-start py-4">
+        <h4 class="font-bold text-xl">RSS-Feed-Finder:</h4>
+        <p class="text-pink-700 font-bold text-xl pl-0 sm:pl-4">{{ category }}</p>
+      </div>
 
       <div class="image-box w-full sm:w-2/3 md:w-1/2 lg:w-1/3"> <!-- Add overflow-hidden for responsive -->
         <img 
@@ -37,7 +41,9 @@ export default {
     return {
       url: '', 
       category: '', 
-      thumbnail:''
+      thumbnail:'',
+      rss_link:''
+
     };
   },
   methods: {
@@ -58,6 +64,7 @@ export default {
         const data = await response.json();
         this.category = data.category; 
         this.thumbnail = data.thumbnail; 
+        this.rss_link = data.rssFeed;
 
       } catch (error) {
         console.error('Error sending URL:', error);
