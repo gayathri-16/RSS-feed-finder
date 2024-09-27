@@ -9,11 +9,16 @@ module.exports = {
       boxShadow:{
         'custom':'rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;',
         'img':'rgba(0, 0, 0, 0.05) 0px 1px 2px 0px'
+      },
+      colors:{
+         'custom-teal':'#29A0B1'
       }
     },
   },
+
+  purge: false,
   plugins: [],
-  purge: false
+
 
 }
 
