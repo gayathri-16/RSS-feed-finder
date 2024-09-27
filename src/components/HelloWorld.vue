@@ -50,7 +50,7 @@
       </div> 
 
       <!-- Conditionally display category and RSS feed -->
-      <div class="flex items-center xl:w-10/12 justify-between  sm:flex-row lg:flex-row flex-col">
+      <div class="flex items-center  justify-between  sm:flex-row lg:flex-row flex-col">
   <div class="flex flex-col items-start justify-start w-full sm:w-auto py-4">
     <div class="flex flex-col sm:flex-row items-start justify-start py-2">
       <h4 class="font-bold text-l">Your URL is categorized as:</h4>
