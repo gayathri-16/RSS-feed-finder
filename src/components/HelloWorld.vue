@@ -154,9 +154,13 @@ export default {
 
 .glassmorphism-container {
   max-height: 98vh; /* Ensure max height for scroll */
-  overflow-x: hidden; /* Prevent horizontal scroll */
+  overflow-x: hidden;
+  -ms-overflow-style: none;  /* Internet Explorer 10+ */
+  scrollbar-width: none;  /* Prevent horizontal scroll */
 }
-
+.glassmorphism-container::-webkit-scrollbar {
+  display: none;  /* Safari and Chrome */
+}
 ::-webkit-input-placeholder {
   color: white;
 }
