@@ -59,8 +59,9 @@
 
       <!-- Conditionally display category and RSS feed -->
       <div
-        class="flex items-center xl:w-9/12 w-full m-2 justify-between sm:flex-row lg:flex-row  flex-col"
-      >
+  class="flex flex-col xl:flex-row xl:w-9/12 w-full m-2 justify-between"
+>
+
         <div class="flex flex-col items-start justify-start w-full sm:w-auto">
           <div class="flex  sm:flex-row items-start justify-start py-4">
             <h4 class="font-bold text-l">Your URL is categorized as:</h4>
@@ -79,7 +80,7 @@
         <!-- Image box with fixed size -->
         <div
           v-if="thumbnail"
-          class="image-box ml-2 sm:mt-0  w-full sm:w-auto"
+          class="image-box m-0 p-0 w-full sm:w-auto"
         >
           <img
             v-if="thumbnail"
@@ -142,7 +143,6 @@ export default {
   width: 100%;
   max-width: 400px; /* Set max width */
   height: 200px; /* Fixed height */
-  margin-left: 1rem;
   object-fit: cover;
   position: relative;
 }
