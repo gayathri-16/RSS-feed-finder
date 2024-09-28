@@ -1,8 +1,8 @@
 <template>
   <div class="flex flex-col text-black/80 justify-between bg-white h-screen">
-  <!-- header -->
+    <!-- header -->
     <div
-      class="flex flex-row xl:p-16 p-8  bg-custom-teal items-center space-x-3 justify-start w-full xl:w-full"
+      class="flex flex-row xl:p-16 p-8 bg-custom-teal items-center space-x-3 justify-start w-full xl:w-full"
     >
       <i class="fa-solid fa-wand-magic-sparkles text-blue text-3xl"></i>
       <h4 class="font-bold text-3xl">RSS - FEED</h4>
@@ -10,9 +10,7 @@
 
     <!-- body -->
 
-    <div
-      class="flex items-start xl:px-16 px-8 flex-col w-full justify-start"
-    >
+    <div class="flex items-start xl:px-16 px-8 flex-col w-full justify-start">
       <div class="flex flex-col items-start space-y-3 justify-start py-3">
         <label for="url" class="font-bold text-l">
           Enter a website URL to get the website's category, thumbnail, and RSS
@@ -61,27 +59,28 @@
 
       <!-- Conditionally display category and RSS feed -->
       <div
-        class="flex items-center xl:w-9/12 w-full justify-between sm:flex-row lg:flex-row flex-col"
+        class="flex items-center xl:w-9/12 w-full m-2 justify-between sm:flex-row lg:flex-row flex-col"
       >
-        <div
-          class="flex flex-col items-start justify-start w-full sm:w-auto "
-        >
-          <div class="flex flex-col sm:flex-row items-start justify-start py-4">
+        <div class="flex flex-col items-start justify-start w-full sm:w-auto">
+          <div class="flex  sm:flex-row items-start justify-start py-4">
             <h4 class="font-bold text-l">Your URL is categorized as:</h4>
-            <p class=" font-bold text-l pl-0 sm:pl-2">
+            <p class="font-bold text-l pl-2">
               {{ category }}
             </p>
           </div>
-          <div class="flex flex-col sm:flex-row items-start justify-start py-2">
+          <div class="flex  sm:flex-row items-start justify-start py-2">
             <h4 class="font-bold text-l">RSS-Feed-Finder:</h4>
-            <p class=" font-bold text-l pl-0 sm:pl-2">
+            <p class="font-bold text-l pl-2 ">
               {{ rss_link }}
             </p>
           </div>
         </div>
 
         <!-- Image box with fixed size -->
-        <div v-if="thumbnail" class="image-box mt-4 sm:mt-0 sm:ml-4 w-full sm:w-auto">
+        <div
+          v-if="thumbnail"
+          class="image-box m-2 sm:mt-0  w-full sm:w-auto"
+        >
           <img
             v-if="thumbnail"
             :src="thumbnail"
@@ -91,14 +90,13 @@
         </div>
       </div>
     </div>
-<!-- Footer -->
-<div
-  class="flex flex-row items-center space-x-3 p-4 justify-center w-full border-t border-gray/80 mt-auto"
->
-  <i class="fa-regular fa-copyright text-sm"></i>
-  <h4 class="font-bold text-sm">2024 RSS Finder</h4>
-</div>
-
+    <!-- Footer -->
+    <div
+      class="flex flex-row items-center space-x-3 p-4 justify-center w-full border-t border-gray/80 mt-auto"
+    >
+      <i class="fa-regular fa-copyright text-sm"></i>
+      <h4 class="font-bold text-sm">2024 RSS Finder</h4>
+    </div>
   </div>
 </template>
 
@@ -161,7 +159,7 @@ export default {
     border-color: rgba(0, 0, 0, 0.5); /* Light white */
   }
   50% {
-    border-color:  rgba(0, 0, 0, 0.5); /* Full white */
+    border-color: rgba(0, 0, 0, 0.5); /* Full white */
   }
 }
 
@@ -169,12 +167,7 @@ export default {
   animation: blink 1s infinite; /* Apply the blinking effect */
 }
 
-
 .container::-webkit-scrollbar {
   display: none; /* Safari and Chrome */
 }
-
-
-
-
 </style>
