@@ -59,7 +59,7 @@
 
       <!-- Conditionally display category and RSS feed -->
       <div
-        class="flex items-center xl:w-9/12 w-full m-2 justify-between sm:flex-row lg:flex-row flex-col"
+        class="flex items-center xl:w-9/12 w-full m-2 justify-between sm:flex-row lg:flex-row  flex-col"
       >
         <div class="flex flex-col items-start justify-start w-full sm:w-auto">
           <div class="flex  sm:flex-row items-start justify-start py-4">
@@ -79,7 +79,7 @@
         <!-- Image box with fixed size -->
         <div
           v-if="thumbnail"
-          class="image-box m-2 sm:mt-0  w-full sm:w-auto"
+          class="image-box ml-2 sm:mt-0  w-full sm:w-auto"
         >
           <img
             v-if="thumbnail"
