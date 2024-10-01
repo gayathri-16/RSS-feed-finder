@@ -11,7 +11,11 @@ module.exports = {
         'img':'rgba(0, 0, 0, 0.05) 0px 1px 2px 0px'
       },
       colors:{
-         'custom-teal':'#D4F1F4'
+         'custom-teal':'#D4F1F4',
+         'btn-teal':'#6AF2F0'
+      },
+      fontSize:{
+        'normal':'16px'
       }
     },
   },
